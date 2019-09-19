@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <!-- This is a shipping order form 
+        -method type is get -->
+    <form method="get">
+        <label for="email">Email</label>
+        <!--Input description
+            -input type = text
+            -name is email
+            -size is 30 and max length is 100
+            -id is Email     
+        -->
+        <input type="text" name="Email" placeholder="Please enter your email address" size="30" maxlength="100"id="Email"/>
+        <br />
+        <label for="postal code">Postal Code</label>
+        <!--Input description
+            -input type = text
+            -name is Postal code
+            -size is 30 and max length is 100
+            -id is postal code
+        -->
+        <input type="text" name="Postal code" placeholder="Please enter your Postal Code" size="30" maxlength="100" id="Postal Code" />
+        <br />
+        <label for="city">City</label>
+        <!--Input description
+            -input type = text
+            -name is city
+            -size is 30 and max length is 100
+            -id is City
+        -->
+        <input type="text" name="City" placeholder="Please enter your City" size="30" maxlength="100" id="City" />
+        <p>Choose a shipping process</p>
+        <select name="Shipping">
+            <option>Standard Shipping (2-3 Buisness days)</option>
+            <option>Two-day Shipping (2 days)</option>
+            <option>One-Day Shipping (1 day)</option>
+        </select>
+        <!--Input description
+            -input type = radio
+            -name is Paypal
+            -value = Paypal
+        -->
+        <p>Chosse a payment method</p>
+        <label> <input type="radio" name="Paypal" value="Paypal">Paypal</label>
+        <!--Input description
+            -input type = radio
+            -name is Debit Card
+            -value = Debit Card
+        -->
+        <label> <input type="radio" name="Debit Card" value="Debit Card">Debit Card</label>
+        <!--Input description
+            -input type = radio
+            -name is Credit Card
+            -value = Credit Card
+        -->
+        <label> <input type="radio" name="Credit Card" value="Credit Card">Credit Card</label>
+        <br/>
+        <label for="comments">Comments</label>
+        <!--textarea
+            - name = comments
+            -4 rows and 40 columns
+            -id comments
+        -->
+        <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
+        <br />
+        <!--Input description
+            -input type = checkbox
+            -name is updates
+            -value = Sign me up for e-mail updates
+        -->
+
+        <label> <input type="checkbox" name="Updates" value="Sign me up for e-mail updates" checked="checked">Sign me up for e-mail updates</label>
+        <br />
+        <!--Input description
+            -input type = checkbox
+            -name is Payment information
+            -value = Save my payment information
+        -->
+        <label> <input type="checkbox" name="Payment information" value="Save my payment information" checked="checked">Save my payment information</label>
+        <br />
+        <input type="submit" />
+    </form>
+    <a href="index.html">components</a>
+
+    <br />
+
+    <a href="links-and-images.html">links and images</a>
+    <br />
+    <a href="iframes-lists-tables.html">IFrame, Lists and Tables</a>
+
+</body>
+</html>
