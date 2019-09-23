@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<!-- Name: Aryan
+- Course: Software Development 20S
+- Teacher: Mr. Hardman
+- School: Pembina Trails Early College
+- Date Last Modified:2019-9-18 Time: 11.14AM 
+-->
+<html>
+<head>
+    <title>All About Aryan</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        /* displayFirstText
+        takes the input you put in the id name
+        and presents it in the id welcome with Other text that respond to the question
+        */
+
+        function displayFirstText() {
+            //take thext recived from name  and send it to welcome
+            document.getElementById("welcome").innerHTML = "Hello, " + document.getElementById("name").value + "! ";
+        }
+        /* displaySecondText
+        takes the input you put in the id age
+        and presents it in the id ageInput with Other text that respond to the question
+        */
+        function displaySecondText() {
+            document.getElementById("ageInput").innerHTML = "You are, " + document.getElementById("age").value + " year old, Nice!";
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <a href="Questionandcontact.html">Question</a>
+    </div>
+    <div>
+        <h3>Hi My name is <i>Aryan</i> and this is my all about <i>Aryan</i> </h3>
+        <p>In this website you will learn about me and the things I like. This a link to a webpage if you have <a href="Questionandcontact.html">question</a></p>
+
+    </div>
+    <div>
+        <!--form
+        Method = get
+        action="#" onsubmit="displayFirstText();return false = On submit, send the form-data to a displayFirstText()
+        the action tag send all the form data to the function displayFirstText
+        The form will also ask questions
+        -->
+        <form method="get" action="#" onsubmit="displayFirstText();return false">
+
+            <p>Well Hello if you havent figured my name out? Its Aryan! Lets start off with a little indrouction.</p>
+            <p>
+                My name is:
+                <!--Input type text
+                This input get the name of the user and stores in id name which is later sent to the command displayFirstText
+                placeholder that says "your name"
+                width of 6 height of 1 maxlength 0f 10
+                -->
+                <label>
+                    <input type="text" placeholder="Your Name" width="6" height="1" maxlength="10" id="name" />
+                </label>
+                <!--this is where the function displayFirstText will display text-->
+                <div id="welcome"></div>
+            </p>
+            <!--input type is sumbit this input sumbits the form-->
+            <input type="submit" />
+        </form>
+        <!--form
+        Method = get
+        action="#" onsubmit="displaySecoindText();return false = On submit, send the form-data to a displaySecondText()
+        the action tag send all the form data to the function displaySecondName
+        The form will also ask questions
+        -->
+        <form method="get" action="#" onsubmit="displaySecondText();return false">
+            <p>
+                I am a 15 year old male who is makeing this website for school. So How old are you and why are you here? I am
+                <!--Input type text
+                This input get the age of the user and stores in id age which is later sent to the Function displaySecondText
+                placeholder that says "age"
+                width of 3 height of 1 maxlength 0f 3
+                -->
+
+                <label>
+
+                    <input type="text" placeholder="Age" width="3" height="1" id="age" maxlength="3" />
+                </label>
+                <!-- this where the function displaySecondText will display the text-->
+                <div id="ageInput"></div>
+            </p>
+            <!--input type is sumbit this input sumbits the form-->
+            <input type="submit" />
+        </form>
+        <p> Well now i am gonna tell you what my favorite food is in order </p>
+        <ol type="1">
+            <li>Pizza <img src="https://lh3.googleusercontent.com/-1Iil24qU-EM/VqnJ50T5vII/AAAAAAAFQzI/O2jXEMQXKt0/s800-Ic42/cheese-pizza-2.jpg" width="100" height="100" alt="Image of pizza" /></li>
+            <li>Subway<img src="https://www.logodesignlove.com/images/wordmarks/subway-logo-02.jpg" alt="subway logo" width="150" height="100" /></li>
+            <li>Chicken<img src="https://images-gmi-pmc.edge-generalmills.com/3973d54d-0004-4c06-a9d1-0843f3bf3efa.jpg" alt="picture of chicken strips" width="150" height="100" /></li>
+        </ol>
+        <p>Hoping i have some pizza today while watching this video <iframe src="https://www.youtube.com/embed/FQOLsNm6zIE" name="video" frameborder="0" width="500" height="200"></iframe></p>
+        <p>This was todays post wait for tommorrow for a another post</p>
+    </div>
+    <div>
+        <p>There is a mini contact form on the back if you wish to <a href="Questionandcontact.html">question</a> me for any reasons</p>
+        <p>If you want to see my portfoio click this <a href="https://aryansaini1005.wixsite.com/portfolio" target="portfolio">link</a></p>
+        <iframe name="portfolio" frameborder="0" width="500" height="200"></iframe>
+    </div>
+    <div>
+        <p><i><sub>Last Updated 2019-09-17 10:31</sub></i></p>
+    </div>
+
+</body>
+</html>
