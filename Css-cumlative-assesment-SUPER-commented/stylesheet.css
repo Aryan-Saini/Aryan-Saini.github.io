@@ -1,0 +1,381 @@
+body {
+  /*magin needs to be zero so my nav can go on the top*/
+  margin: 0;
+  /*background color for my body needs to be my main color because i am usingThe Body and Content Background As One theory*/
+  background-color: #5569DC;
+  /*color for all my text*/
+  color: white;
+  /*my font size for all my text in my pargarphs*/
+  font-size: 20px;
+  /*my website looked better with a bigger line height so i changes it*/
+  line-height: 140%;
+  /**/
+  font-family: Candara, Arial, sans-serif;
+  /* Some of my nav, footer, images overflowed. So i made overflox x hidden */
+  overflow-x: hidden;
+}
+
+nav {
+  /* postion is fixed so it stays on the top always */
+  position: fixed;
+  /*top is here so my nav always stays on the top for the veiw height*/
+  top: 0vw;
+  /*background color for my nav. Its diffrent because my nav with a border on the bottom didn't look good 
+    so i added a darker shade of blue*/
+  background-color: #3c4cab;
+  /*padding for the nav on the bottom so it looks more centered when the underline appears*/
+  padding-bottom: 7px;
+  /*its here because it kept going under my images and text*/
+  z-index: 1;
+  /*obviously the nav needs to have a 100% of the width so it covers the top*/
+  width: 100%;
+}
+
+nav ul {
+  /* I dont want any bullet points for my list so I set it to none*/
+  list-style-type: none;
+  /*I dont want the ul to have any margin*/
+  margin: 0px;
+  /*I dont want to see any extra overflow so I  set it to hidden*/
+  overflow: hidden;
+  /*I needed some extra padding on the top and bottom so there is more white space. 
+    Aric gave me this idea appraently it made it easier to focus on the nav bar
+    */
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+nav li {
+  /*I dont want my list items to have margin*/
+  margin: 0%;
+  /* I changed the display value because it kept displaying as a column*/
+  display: table-row;
+  /*helped me center the nav links better */
+  float: left;
+}
+
+nav a {
+  /*I want my nav items to display block so they are spaced out better*/
+  display: block;
+  /*Some extra padding around the content*/
+  padding: 8px;
+  /*margin left and right is there so the content of the nav have nice space between so there is 45 px space 
+    between each nav link item*/
+  margin-left: 5px;
+  margin-right: 40px;
+  /*font family Arial looked nice so its there*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+/*Use a transition we did not discuss in class*/
+
+/* Un stands for underline transition that happend every time you hover over a item in my nav */
+
+.un a, .un a:visited {
+  /*dont want my links to have a underline*/
+  text-decoration: none;
+  /*the position of my links is relative because I dont need to move it alot*/
+  position: relative;
+  /*the text color has to be white for the links*/
+  color: white;
+}
+
+/* The ::after selector inserts something after the content of each selected element.*/
+
+.un a:after, .un a:visited:after {
+  /* i dont actually want any content in my underline so i left it empty*/
+  content: '';
+  /*height of the underline is 3px*/
+  height: 3px;
+  /*postion of the underline is absolute*/
+  position: absolute;
+  /*this underline will appear on the bottom of the span*/
+  bottom: 0;
+  /*the :after selector adds content after the selected element*/
+  /*I need my underline to be under the text and not after the text*/
+  left: 0;
+  /*width is zero at the start of the transition*/
+  width: 0%;
+  /*Background of the underline needs to be white*/
+  background: white;
+  /*this sets the transition-duration to 0.2s so the animation finishes in that time*/
+  -webkit-transition: 0.2s;
+  /* Safari prior 6.1 */
+  transition: 0.2s;
+}
+
+/*Once you hover width of the un will be 100%*/
+
+.un a:hover:after, .un a:visited:hover:after, .un a:focus:after {
+  /*Width of the un is a 100% of the liink after you hover on it*/
+  width: 100%;
+}
+
+/*info is my content on the right in my index.html*/
+
+#info {
+  /*Its easier to change the location of the text so i det my postion to absolute*/
+  position: absolute;
+  /*needs to be arround the top but under the nav */
+  top: 8.6%;
+  /*I use a lot of transform translate because its my primary way of postioning things its not very responsive*/
+  /*moving my info to the right by 227 percent */
+  -webkit-transform: translateX(227%);
+  -ms-transform: translateX(227%);
+  -moz-ransform: translateX(227%);
+  -o-transform: translateX(227%);
+  transform: translateX(227%);
+  /*padding on the top so you cant see any of the image, on the right so it goes to the end and helps center my content
+    , 0.25% on the bottom so it covers the image, 7% on the left so it covers more o fthe image*/
+  padding: 21% 5% 0.25% 7%;
+  /*background color of this div is the same color my body is*/
+  background: #5569DC;
+  /*this is here so my text is always in the center*/
+  text-align: center;
+}
+
+/*The middle is the text */
+
+#middle {
+  /*The font family is arial*/
+  font-family: Arial, Helvetica, sans-serif;
+  /*background color for the div*/
+  background-color: #5569DC;
+  /*translate the text so its more centered and in the middle of the div*/
+  transform: translate(0%, -30%);
+}
+
+#middle h1 {
+  /*Styling the h1 to have 40 px font size*/
+  font-size: 40px;
+  /*changing the postion to absolute to move it around easier*/
+  position: absolute;
+  /*moving the div so its int center of the other div*/
+  -webkit-transform: translate(0%, -350%);
+  -ms-transform: translate(0%, -350%);
+  -moz-ransform: translate(0%, -350%);
+  -o-transform: translate(0%, -350%);
+  transform: translate(0%, -350%);
+}
+
+#middle p {
+  /*makes space between the button and the text above it*/
+  margin-bottom: 40%;
+}
+
+/*Styling the button*/
+
+.btn {
+  /*The button has a dark green color*/
+  background-color: #46541E;
+  /*since butns  have border this removes it*/
+  border: none;
+  /*Changing the font of the button to be candara*/
+  font-family: Candara, Arial, Helvetica, sans-serif;
+  /*adding padding of 10 px on the top and bottom also 22 px on the left and right so its bigger*/
+  padding: 10px 22px;
+  /*adds a margin around to the button*/
+  margin: 5%;
+  /*centers the text in the button*/
+  text-align: center;
+  /*inline block allows to set a width and height on the element and there is no line break so elements can sit beside it*/
+  display: inline-block;
+  /*setting the font size o fthe text in the button*/
+  font-size: 25px;
+  /*setting the text color to white*/
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.btn:hover, .btn:focus {
+  /*once you hover the text color and background color switch places */
+  background-color: white;
+  color: #46541E;
+}
+
+#title {
+  /*title color*/
+  color: #007AAA;
+  /*font of my title*/
+  font-family: Candara, Arial, sans-serif;
+  /*makes the title bold*/
+  text-decoration: bold;
+  /*moves the title to be on top of the image*/
+  -webkit-transform: translate(15%, -200%);
+  -ms-transform: translate(15%, -200%);
+  -moz-ransform: translate(15%, -200%);
+  -o-transform: translate(15%, -200%);
+  transform: translate(15%, -200%);
+}
+
+#title h3 {
+   /*font size of the titles h3 tag*/
+  font-size: 45px;
+}
+
+#title h1 {
+  /*font size of the titles h1 tag*/
+  font-size: 60px;
+}
+
+.text2 {
+  /*making the text2 which is the conten if you keep scrolling */
+  /*this positions the text to be 100% after the page*/
+  top: 101%;
+  /*i need this so I can base the top property from the top*/
+  position: absolute;
+  /*width and height is auto and auto is caluclated by the browser*/
+  width: auto;
+  height: auto;
+}
+/*positioning the image to be on the right, setting the width and height o fthe image */
+.text2 img {
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+/*styling the h1 tag and the p tag to have a 15% padding on the left to create more white space */
+.text2 h1, .text2 p {
+  padding-left: 15%;
+}
+/*styling text2 paragraphs to have 0 padding on the right and bottom but having 9% padding on the top and 2% on tne left */
+.text2 p {
+  padding: 9% 0% 0% 2%;
+}
+/*styling the text h1 to have a padding of 7% on the top */
+.text2 h1 {
+  padding-top: 7%;
+}
+
+/*stylying the whole footer*/
+
+footer {
+  /*styling the footer to have a dark black background*/ 
+  background-color: #706767;
+  /*styling the footer to have a 100% width*/
+  width: 100%;
+  /*giving it the postion absolute to move it easier*/
+  position: absolute;
+  /*its -85% because its around where i want it and then on every page i move the footer more with transform translate*/
+  bottom: -85%;
+  /*i want the footer text to be arial*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*text on the left of the footer*/
+
+#footLeft {
+  /*floating my number and email to the left and then adding padding for white space reasons*/
+  float: left;
+  padding-left: 20px;
+  padding-top: 5%;
+}
+
+/*for the text in the middle of the footer*/
+
+#footMiddle {
+  /*floating the text to the left and then changing the positioning with padding*/
+  float: left;
+  padding-left: 18%;
+  /*changing the font size to be 15 px*/
+  font-size: 15px;
+  
+}
+
+/*for buttons on the right of the footer*/
+
+#footRight {
+  /*floating the buttons right and then adding then padding on the right for white space reasons */
+  float: right;
+  padding-right: 2%;
+  /*centers my git image*/
+  text-align: center;
+}
+
+/*Use a animation we did not discuss in class*/
+
+.container {
+  /*container for my animation*/
+  /*center the text to be in the middle of the page */
+  text-align: center;
+  /*setting the postion to absolute so i can move it around easier*/
+  position: absolute;
+  /*padding on the top and left so its horizontally centered*/
+  padding-top: 50%;
+  padding-left: 2%;
+  /*moving the text -50% of the page in the y axis*/
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -moz-ransform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%); 
+  /*setting the width to a 100% so it has lots of space and covers the page*/ 
+  width: 100%;
+}
+/*my span holds my text for the animation*/
+.container span {
+  /*makes my text upper case*/
+  text-transform: uppercase;
+  /*making the span a block so it has line break*/
+  display: block;
+}
+
+#text1Anim {
+  /*padding on the top so it covers text 2 */
+  padding-top: 2%;
+  /**setting the font size of text 1*/
+  font-size: 100px;
+  /*font weight is 700 so it looks thick*/
+  font-weight: 700;
+  /*letter spacing is 8% at the start*/
+  letter-spacing: 8px;
+  /*margin is 30 px so the text stays away from the other text*/
+  margin-bottom: 30px;
+  /*background color of the text so it covers text 2 and blends in with  the background*/ 
+  background: #5569DC;
+  /*postion is relative because it moves from that area*/
+  position: relative;
+  /*animation name is text and the duration is 3s*/
+  -webkit-animation: text 3s ;
+  animation: text 3s ;
+}
+/*styling text2 of the animation to have a font size of 50px and color of black*/
+#text2Anim {
+  font-size: 50px;
+  color: #000000;
+}
+
+@-webkit-keyframes text {
+  0% {
+    color: #5569DC;
+    /*margin-bottom - 50 is for the text to move up since it covering text 2*/
+    margin-bottom: -50px;
+  }
+  15% {
+    letter-spacing: 25px;
+  }
+  30% {
+    letter-spacing: 8px;
+  }
+}
+/*This animation is created by gradually changing from one set of CSS styles to another.*/
+@keyframes text {
+  /*at the start the text color will change from blue to white and the margin has a negative valuse so it will move up 50 px */
+  0% {
+    color: #5569DC;
+    /*margin-bottom - 50 is for the text to move up since it covering text 2*/
+    margin-bottom: -50px;
+  }
+  15% {
+    /*letter spacing changes so it looks like the text was streched and then back to normal*/
+    color: white;
+    letter-spacing: 25px;
+  }
+  30% {
+    color: white;
+    /*letter spacing is back to normal*/
+    letter-spacing: 8px;
+  }
+}
