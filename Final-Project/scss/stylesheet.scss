@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-@import 'nav';
-@import 'footer';
-@import 'mainPage';
-@import 'order';
-@import 'locations';
-@import 'mediaqueries';
-
+@import 'components/nav';
+@import 'components/footer';
+@import 'pages/mainPage';
+@import 'utils/mediaqueries';
 html,
 body {
   height: 100%;
