@@ -60,7 +60,7 @@ var pizzaCre = [
   //3
   'brooklyn-pepperoni',
   //4
-  'chedar',
+  'Chedar',
   //5
   'feta',
   //6
@@ -74,19 +74,19 @@ var pizzaCre = [
   //10
   'hot-banana-pepper',
   //11
-  'japaleno-peppers',
+  'Japaleno-peppers',
   //12
   'mushmrom',
   //13
   'onions',
   //14
-  'pepperoni',
+  'Pepperoni',
   //15
   'philly',
   //16
   'pineapple',
   //17
-  'salami',
+  'Salami',
   //18
   'sausage'
 ];
